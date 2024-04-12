@@ -224,7 +224,7 @@ export default {
 				preview: `${pagesBuildRunCommand} && wrangler pages dev .vercel/output/static`,
 				deploy: `${pagesBuildRunCommand} && wrangler pages deploy .vercel/output/static`,
 				...(usesTypescript(ctx) && {
-					typegen: `wrangler types --env-interface CloudflareEnv env.d.ts`,
+					"cf-typegen": `wrangler types --env-interface CloudflareEnv env.d.ts`,
 				}),
 			},
 		};
